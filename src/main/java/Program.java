@@ -65,6 +65,7 @@ public class Program {
             exam.categoryId = 4;
             exam.duration = LocalDate.now();
             exam.creatorId = 5;
+            //ss
             exam.createDate = LocalDate.now();
         System.out.println("exam = " + exam.title);
 
