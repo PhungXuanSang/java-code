@@ -6,6 +6,7 @@ public class Program {
         department.id=1;
         department.name="Kế toán";
         System.out.println("department = " + department.name);
+
         Position position = new Position();
         PositionName positionName = PositionName.Dev;
         position.id = 2;
@@ -17,6 +18,7 @@ public class Program {
         account.userName = "Sang";
         account.fullName = "Phùng Xuân Sáng";
         account.departmentId = 1;
+        account.positionId = 3;
         account.createDate = LocalDate.now();
         System.out.println("account = " + account.fullName);
 
@@ -84,17 +86,49 @@ public class Program {
         // Question_02
     if (account.id == groupAccount.accountId){
         if (groupAccount.groupId == 0){
-            System.out.println("Nhan Vien nay chua co gruop");
+            System.out.println("Nhan Vien nay chua co group");
         }else if (groupAccount.groupId==group.id){
             System.out.println("Nhan vien nay da co group");
         }
     }
 
         // Question_03
+        System.out.println(account.departmentId==0 ? "Nhan vien nay chua co group" : "Nhan vien nay da co group ");
 
         // question_04
-        // question_05
+        System.out.println(account.positionId==1 ? "Day la Dev" : "Nguoi nay khong phai dev");
 
+
+        // question_05
+        switch (groupAccount.accountId = 3){
+            case 1 :
+                System.out.println("Nhóm có 1 thành viên");
+                break;
+            case 2 :
+                System.out.println("Nhoms có 2 thành viên");
+                break;
+            case 3 :
+                System.out.println("Nhoms có 3 thành viên");
+                break;
+            default:
+                System.out.println("Nhóm khong có thành viên nao");
+                break;
+        }
+        // question_06
+        switch (groupAccount.groupId =2){
+            case 1 :
+                System.out.println("Group nay co 1 group");
+                break;
+            case  2 :
+                System.out.println("Nhan vien nay co 2 group");
+                break;
+            case  3 :
+                System.out.println("Nhan vien nay co 3 group");
+                break;
+            default:
+                System.out.println("Nhan vien nay chua co group");
+                break;
+        }
 
 }
 }
