@@ -75,8 +75,26 @@ public class Program {
         System.out.println("examQuestion = " + examQuestion.examId);
 
         // question_01
-
+    if (account.departmentId == 0){
+        System.out.println("Nhân vien này chua có phòng ban");
+    }else {
+        System.out.println("Phòng ban của nhân vien này là "+department.name);
     }
 
+        // Question_02
+    if (account.id == groupAccount.accountId){
+        if (groupAccount.groupId == 0){
+            System.out.println("Nhan Vien nay chua co gruop");
+        }else if (groupAccount.groupId==group.id){
+            System.out.println("Nhan vien nay da co group");
+        }
+    }
 
+        // Question_03
+
+        // question_04
+        // question_05
+
+
+}
 }
