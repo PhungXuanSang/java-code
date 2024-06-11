@@ -54,8 +54,41 @@ void question05(){
 void question06(){
     System.out.print("Nhập vào ho va ten day du: " );
     String s1 = scanner.nextLine().trim();
-    for (int i = 0; i < s1.length(); i++) {
-        System.out.println(s1.charAt(1));
+    String cleanedInput = s1.trim().replaceAll("\\s+", " ");
+    //  thay thế tất cả các khoảng trắng liên
+    // tiếp (bao gồm cả khoảng trắng, tab, dòng mới, v.v.)
+    // thành một khoảng trắng duy nhất.
+
+    String[] words = cleanedInput.split(" ");
+    if (words.length==3){
+        String ho = words[0];
+        String ten = words[words.length-1];
+        String tenDem = words[1].trim();
+        System.out.println("ho = " + ho);
+        System.out.println("tenDem = " + tenDem);
+        System.out.println("ten = " + ten);
+
+    } else if (words.length == 4) {
+        String ho = words[0];
+        String ten = words[words.length-1];
+        String tenDem = (words[1] + " "+ words[2]).trim();
+        System.out.println("ho = " + ho);
+        System.out.println("tenDem = " + tenDem);
+        System.out.println("ten = " + ten);
+    }else {
+        System.out.println("Tên qua dai hoac khong dung dinh dang");
     }
+
+}
+void question07(){
+    System.out.print("Nhập vào ho va ten day du: " );
+    String s1 = scanner.nextLine().trim();
+    String cleanedInput = s1.trim().replaceAll("\\s+", " ");
+    System.out.println("chuan hoa phan A:"+cleanedInput);
+    String[] words = cleanedInput.split(" ");
+    String s2 = String.valueOf(s1.toUpperCase().charAt(0));
+    System.out.println("s2 = " + s2);
+
+
 }
 }

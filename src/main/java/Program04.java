@@ -5,6 +5,8 @@ public class Program04 {
  //   exercise04.question02();
  //d       exercise04.question03();
  //       exercise04.question04();
-        exercise04.question05();
+ //       exercise04.question05();
+ //       exercise04.question06();
+        exercise04.question07();
     }
 }
