@@ -7,6 +7,8 @@ public class Program04 {
  //       exercise04.question04();
  //       exercise04.question05();
  //       exercise04.question06();
-        exercise04.question07();
+ //       exercise04.question07();
+ //       exercise04.question10("word","drow1");
+        System.out.println("exercise04.question15(\"Phung xuan sang\") = " + exercise04.question15("Phung xuan sang"));
     }
 }

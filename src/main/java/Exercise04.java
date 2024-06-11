@@ -86,9 +86,48 @@ void question07(){
     String cleanedInput = s1.trim().replaceAll("\\s+", " ");
     System.out.println("chuan hoa phan A:"+cleanedInput);
     String[] words = cleanedInput.split(" ");
-    String s2 = String.valueOf(s1.toUpperCase().charAt(0));
-    System.out.println("s2 = " + s2);
+    if (words.length==3){
+        String ho = String.valueOf(words[0].toUpperCase().charAt(0));
+        String ten = String.valueOf(words[words.length-1].toUpperCase().charAt(0));
+
+        String tenDem = String.valueOf(words[1].trim().toUpperCase().charAt(0));
+        System.out.println("Chuan hoa phan B:"+(ho+" "+tenDem+" "+ten));
+    } else if (words.length == 4) {
+        String ho = String.valueOf(words[0].toUpperCase().charAt(0));
+        String ten = String.valueOf(words[words.length-1].toUpperCase().charAt(0));
+        String tenDem = (words[1].toUpperCase().charAt(0) + " "+ words[2].toUpperCase().charAt(0)).trim();
+        System.out.println("Chuan hoa phan B:"+(ho+" "+tenDem+" "+ten));
+
+    }else {
+        System.out.println("Tên qua dai hoac khong dung dinh dang");
+    }
 
 
 }
+String question10(String s1, String s2){
+    int length1 = s1.length();
+    int length2 = s2.length();
+    if (length1 != length2){
+        return "KO";
+
+    }
+    for (int i = 0; i < length1; i++) {
+        char c1 = s1.charAt(i);
+        char c2 = s2.charAt(length1 - 1 - i);
+        if (c1 != c2){
+            return "KO";
+        }
+    }
+    return "OK";
+}
+String question15(String s){
+        String[] words = s.split(" ");
+        String result = "";
+    for (int i = words.length-1; i >=0 ; i--) {
+        result += words[i]+" ";
+
+    }
+    return result.trim();
+}
+
 }
